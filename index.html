@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T. Milan Nelson - Composer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Poppins:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&family=IM+Fell+English+SC&family=Poppins:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: #000;
+    }
+    #top-header {
+      display: flex;
+      flex-direction: column;
+      background-color: black;
+      width: 100%;
+      height: 160px;
+      color: white;
+      align-items: center;
+      justify-content: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    #top-header h1 {
+      font-family: "IM Fell English SC", serif;
+      font-size: 16px;
+      letter-spacing: 2px;
+      margin-bottom: 5px;
+      color: lightgray;
+    }
+    #top-header h2 {
+      font-family: "Abel", sans-serif;
+      font-size: 24px;
+      font-weight: heavier;
+      letter-spacing: 8px;
+      text-shadow: 3px 2px teal;
+    }
+    #navbar {
+      word-spacing: 70px;
+      margin-top: 40px;
+      margin-bottom: -25px;
+    }
+    .nav-link {
+      text-decoration: none;
+      font-family: sans-serif;
+      color: teal;
+      letter-spacing: 3px;
+      font-size: 14pt;
+    }
+    .nav-link:hover {
+      color: slategray;
+    }
+    .header {
+      width: 100%;
+      height: 100vh;
+      background: #000;
+    }
+    .header #bg {
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(bg.jpg);
+    }
+    #about-div {
+      display: flex;
+      flex-direction: column;
+      padding: 100px;
+      color: #fff;
+      height: 70vh;
+      scroll-margin-top: 160px;
+      align-items: center;
+    }
+    #about-div h2 {
+      font-size: 3em;
+      letter-spacing: 40px;
+      font-family: "Abel", sans-serif;
+      font-weight: lighter;
+      text-shadow: 3px 2px teal;
+      margin-left: 30px;
+      color: lightgray;
+    }
+    #about-div p {
+      font-family: sans-serif;
+      font-size: 14px;
+      width: 400px;
+      margin-top: 40px;
+      line-height: 40px;
+      letter-spacing: 1px;
+      margin-right: 40px;
+    }
+    #about-pic {
+      height: 320px;
+      width: 250px;
+      margin-top: 60px;
+      box-shadow: 0 0 10px teal;
+    }
+    #about-content {
+      display: flex;
+      flex-direction: row;
+    }
+    #music-div {
+      display: flex;
+      color: white;
+      padding: 100px;
+      height: 70vh;
+      scroll-margin-top: 160px;
+      align-items: center;
+      flex-direction: column;
+      background-image: url(bg.jpg);
+    }
+    #music-div h2 {
+      font-size: 7em;
+      letter-spacing: 60px;
+      font-family: "Abel", sans-serif;
+      font-weight: lighter;
+      text-shadow: 3px 2px teal;
+      margin-top: -30px;
+      margin-bottom: 50px;
+      margin-left: 30px;
+      color: lightgray;
+    }
+    #video1 {
+      border: none;
+      box-shadow: 0 0 10px black;
+    }
+    #video2 {
+      border: none;
+      box-shadow: 0 0 10px black;
+      margin-top: 43px;
+    }
+    #sc-player {
+      box-shadow: 0 0 10px black;
+    }
+    #music-content {
+      display: flex;
+      flex-direction: row;
+    }
+    #videos {
+      display: flex;
+      flex-direction: column;
+      margin-right: 40px;
+    }
+    input[type="text"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+
+    input[type="submit"] {
+      background-color: teal;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: black;
+    }
+    #contact-div {
+      display: flex;
+      flex-direction: column;
+      padding-top: 50px;
+      padding-bottom: 100px;
+      height: 70vh;
+      align-items: center;
+      scroll-margin-top: 150px;
+    }
+    .container {
+      display: inline-block;
+      background-color: #092a2e;
+      padding: 20px;
+      border-radius: 10px;
+      color: white;
+      box-shadow: 0 0 10px teal;
+      width: 70%;
+      margin-bottom: 70px;
+    }
+    #contact-div h2 {
+      font-size: 3em;
+      letter-spacing: 40px;
+      font-family: "Abel", sans-serif;
+      font-weight: lighter;
+      text-shadow: 3px 2px teal;
+      color: lightgray;
+      margin-bottom: 30px;
+      margin-left: 30px;
+    }
+    @media screen and (max-height: 700px) {
+      #music-div {
+        height: 699px;
+      }
+      #about-div {
+        height: 699px;
+      }
+    }
+    @media screen and (max-width: 750px) {
+      #about-pic {
+        display: none;
+      }
+#about-div p {
+  margin-right: 0;
+  padding: 50px;
+}
+#music-content {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#music-div {
+  height: 1000px;
+}
+#videos {
+  margin-right: 0px;
+}
+#video2 {
+  margin-top: 25px;
+}
+#sc-player {
+  margin-top: 30px;
+}
+    }
+    footer {
+      background-color: black;
+      color: lightgray;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+    }
+    footer p {
+      font-family: sans-serif;
+    }
+  </style>
+  <body>
+    <div id="top-header">
+      <h1>T. MILAN NELSON</h1>
+      <h2>MEDIA COMPOSER</h2>
+      <nav id="navbar">
+        <a href="#about-div" class="nav-link">ABOUT</a>
+        <a href="#music-div" class="nav-link">MUSIC</a>
+        <a href="#contact-div" class="nav-link">CONTACT</a>
+      </nav>
+    </div>
+    <div class="header">
+      <div id="bg"></div>
+    </div>
+    <section id="about-div">
+      <h2>ABOUT</h2>
+      <div id="about-content">
+        <p>
+          T. Milan Nelson composes music for media,<br />
+          specializing in the horror and mystery genres.<br /><br />
+          His credits include feature films, shorts, TV,<br />
+          web content, and video games.<br />
+          <br />
+          Keep scrolling to hear examples of T. Milan Nelson's work, visit his
+          social profiles, and contact him directly to discuss your project.
+        </p>
+        <img src="about-pic.jpg" alt="photo of the artist" id="about-pic" />
+      </div>
+    </section>
+    <section id="music-div">
+      <h2>MUSIC</h2>
+      <div id="music-content">
+        <div id="videos">
+          <iframe
+            id="video1"
+            width="340"
+            height="180"
+            src="https://www.youtube.com/embed/5nTZba6IMEo"
+          >
+          </iframe>
+          <iframe
+            id="video2"
+            width="340"
+            height="180"
+            src="https://www.youtube.com/embed/7V0aMduw4CU"
+          >
+          </iframe>
+        </div>
+        <iframe
+          id="sc-player"
+          width="300"
+          height="400"
+          scrolling="no"
+          frameborder="no"
+          allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1450855708&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+        ></iframe>
+      </div>
+    </section>
+    <section id="contact-div">
+      <h2>CONTACT</h2>
+      <div class="container">
+        <form action="action_page.php">
+          <label for="fname">First Name</label>
+          <input
+            type="text"
+            id="fname"
+            name="firstname"
+            placeholder="Richard"
+          />
+          <label for="lname">Last Name</label>
+          <input type="text" id="lastname" placeholder="Strauss" />
+          <label for="email">Email Address</label>
+          <input type="text" id="email" placeholder="salome_guy@viennaschool.com"
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Write here..."
+            style="height: 140px"
+          ></textarea>
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    </section>
+    <footer>
+      <p>&copy; Tyler Nelson // 2022</p>
+    </footer>
+    <script type="text/javascript">
+      var headerBg = document.getElementById("bg");
+      window.addEventListener("scroll", function () {
+        headerBg.style.opacity = 1 - +window.pageYOffset / 550 + "";
+        headerBg.style.top = +window.pageYOffset + "px";
+        headerBg.style.backgroundPositionY = -+window.pageYOffset / 2 + "px";
+      });
+    </script>
+  </body>
+</html>
